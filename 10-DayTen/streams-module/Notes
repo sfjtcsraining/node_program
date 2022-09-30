@@ -1,0 +1,16 @@
+Streams:
+    - are objects that allows us to read and write data to/from source files.
+    - streams works with event or publisher-subscriber architecture.
+    - Types of Streams:
+        1. Readable Stream
+        2. Writable Stream
+        3. Duplex Stream
+        4. Transform Stream
+    - Built-In Events on Streams:
+        1. data
+        2. end
+        3. error
+        4. finish
+
+
+    

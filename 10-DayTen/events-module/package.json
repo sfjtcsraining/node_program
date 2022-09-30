@@ -1,0 +1,16 @@
+{
+  "name": "10-dayten",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1-events-example.js",
+  "scripts": {
+    "start": "",
+    "dev": "nodemon 1-index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

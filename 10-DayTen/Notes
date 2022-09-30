@@ -1,0 +1,7 @@
+Events:
+    - Node allows us to create and handle custom events.
+    - Thus, node provides events module(built-in module).
+    - Event module include EventEmitter class that helps in raising and handling custom events.
+    - Event helps in working with publisher and subscriber module.
+
+Streams:
