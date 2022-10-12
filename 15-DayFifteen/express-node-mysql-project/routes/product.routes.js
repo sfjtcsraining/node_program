@@ -1,6 +1,6 @@
 
 const db = require('../models');
-const Product = db.product;
+const Product = db.products;
 
 module.exports = function (app) {
     app.get('/products', (req, res) => {
@@ -10,7 +10,8 @@ module.exports = function (app) {
     app.post('/products/add', (req, res) => {
         Product.create({
             name: req.body.name,
-            desc: req.body.desc
+            desc: req.body.desc,
+            brandId: req.body.brandId
         })
             .then((product) => {
                 res.send(product);

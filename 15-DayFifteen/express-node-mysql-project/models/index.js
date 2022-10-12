@@ -24,8 +24,8 @@ db.sequelize = sequelize;
 
 db.user = require('./user.model')(sequelize, Sequelize);
 db.role = require('./role.model')(sequelize, Sequelize);
-db.brand = require('./brand.model')(sequelize, Sequelize);
-db.product = require('./product.model')(sequelize, Sequelize);
+db.brands = require('./brand.model')(sequelize, Sequelize);
+db.products = require('./product.model')(sequelize, Sequelize);
 
 db.role.belongsToMany(db.user, {
     through: "user_roles",
@@ -39,9 +39,8 @@ db.user.belongsToMany(db.role, {
     otherKey: 'roleId'
 });
 
-// Relationship (OneToMany) (1 Product -> Many Brands)
-db.brand.hasMany(db.product, { as: 'products' })
-db.product.belongsTo(db.brand, {
+db.brands.hasMany(db.products, { as: "products" });
+db.products.belongsTo(db.brands, {
     foreginKey: 'brandId',
     as: 'brand'
 })
